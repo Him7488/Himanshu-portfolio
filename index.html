@@ -181,9 +181,41 @@
             section {
                 padding: 55px 7%;
             }
-        }
-    </style>
-.profile-photo {
+        }.skills {
+    padding: 60px 20px;
+}
+
+.skill {
+    margin-bottom: 25px;
+}
+
+.skill-name {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    color: white;
+}
+
+.skill-bar {
+    width: 100%;
+    height: 10px;
+    background: #252b3b;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.skill-progress {
+    height: 100%;
+    background: #00e5ff;
+    border-radius: 20px;
+    animation: fillSkill 2s ease forwards;
+}
+
+@keyframes fillSkill {
+    from {
+        width: 0;
+    }
+}.profile-photo {
     display: block;
     width: 150px;
     height: 150px;
@@ -192,6 +224,8 @@
     border: 3px solid #00e5ff;
     margin-bottom: 20px;
 }
+    </style>
+
 </head>
 
 <body>
@@ -254,30 +288,48 @@
     </div>
 </section>
 
-<section id="skills">
+<section class="skills" id="skills">
     <h2>My <span>Skills</span></h2>
 
-    <div class="cards">
-        <div class="card">
-            <h3>C Programming</h3>
-            <p>Programming fundamentals</p>
-        </div>
-
-        <div class="card">
-            <h3>Java</h3>
-            <p>Learning programming concepts</p>
-        </div>
-
-        <div class="card">
-            <h3>HTML & CSS</h3>
-            <p>Basic web development</p>
-        </div>
-
-        <div class="card">
-            <h3>Graphic Design</h3>
-            <p>Creative visual design</p>
-        </div>
+    <div class="skill">
+    <div class="skill-name">
+        <span>C Programming</span>
+        <span>Beginner</span>
     </div>
+    <div class="skill-bar">
+        <div class="skill-progress" style="width: 25%"></div>
+    </div>
+</div>
+
+<div class="skill">
+    <div class="skill-name">
+        <span>Java</span>
+        <span>Beginner</span>
+    </div>
+    <div class="skill-bar">
+        <div class="skill-progress" style="width: 20%"></div>
+    </div>
+</div>
+
+<div class="skill">
+    <div class="skill-name">
+        <span>HTML & CSS</span>
+        <span>Beginner</span>
+    </div>
+    <div class="skill-bar">
+        <div class="skill-progress" style="width: 30%"></div>
+    </div>
+</div>
+
+<div class="skill">
+    <div class="skill-name">
+        <span>Graphic Design</span>
+        <span>Beginner</span>
+    </div>
+    <div class="skill-bar">
+        <div class="skill-progress" style="width: 40%"></div>
+    </div>
+</div>
 </section>
 
 <section id="projects">
